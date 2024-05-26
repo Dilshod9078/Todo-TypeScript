@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-oy 2-dars</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+<body class="bg-slate-300  h-[100vh] ">
+    
+   <div class="w-[700px] mt-10 mx-auto">
+
+    <form class="w-full form  p-5 rounded-md bg-white">
+      <label class="flex flex-col">
+          <span class="text-[18px] mb-1">Enter todo</span>
+          <div class="flex items-center justify-between">
+              <input  class="form__input p-2 rounded-md w-[78%] border-[2px] border-blue-500" required type="text" placeholder="Enter todo">
+              <button type="submit" class="bg-blue-500 text-white w-[20%] font-bold text-[18px] p-2 rounded-md transition-all duration-300 hover:scale-105">Submit</button>
+          </div>
+      </label>
+      <div class="wrapper__counts">
+        <butonn class="all">All <span class="all-count">0</span></butonn>
+        <butonn class="Complete">Completed <span class="complete-count">0</span></butonn>
+        <butonn class="unComplete">Uncompleted <span class="uncomplete-count">0</span></butonn>
+    </div>
+  </form>
+
+  <ul class="form__list p-5 w-[700px] bg-white mt-4 rounded-md flex flex-col space-y-[7px]">
+
+  </ul>
+   </div>
+
+
+   <div id="wrapper__modal" class="wrapper__modal">
+    <div class="modal">
+    </div>
+</div>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>
